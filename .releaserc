@@ -1,6 +1,6 @@
 {
     "branches": ["master", "main"],
-    "repositoryUrl": "https://github.com/advertikon/repo-name.git",
+    "repositoryUrl": "https://github.com/advertikon/package-slack-notification",
     "plugins": [
       "@semantic-release/commit-analyzer",
        ["@semantic-release/npm", {
