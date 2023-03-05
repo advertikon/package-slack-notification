@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/advertikon/package-slack-notification/compare/v1.0.2...v1.0.3) (2023-03-05)
+
+
+### Bug Fixes
+
+* pass config into sender as an object ([4491807](https://github.com/advertikon/package-slack-notification/commit/44918077bf5833948c5b9af0c3f922016786a4bc))
+
 ## [1.0.2](https://github.com/advertikon/package-slack-notification/compare/v1.0.1...v1.0.2) (2023-03-05)
 
 
