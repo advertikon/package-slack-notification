@@ -21,3 +21,8 @@ type TextField = {
 };
 
 type TextType = 'plain_text' | 'mrkdwn';
+
+export type Config = {
+    packageName: string;
+    errorWebhook?: string;
+};

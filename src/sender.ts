@@ -1,8 +1,12 @@
 import fetch from 'node-fetch';
-import { Message } from './types.js';
+import { Config, Message } from './types.js';
 
 export class SlackSender {
-    constructor(private readonly packageName: string, private readonly errorWebhook: string) {}
+    constructor(private readonly config: Config) {
+        if (!this.config.packageName) {
+            throw new Error('Package name required');
+        }
+    }
 
     private static async send(url: string, message: Message) {
         return fetch(url, {
@@ -15,16 +19,20 @@ export class SlackSender {
     }
 
     async error(message: string | Error) {
+        if (!this.config.errorWebhook) {
+            throw new Error('Webhook URL is not configured');
+        }
+
         const messageText = message instanceof Error ? message.message : message;
 
         const payload: Message = {
-            text: `${this.packageName}. Error: ${messageText}`,
+            text: `${this.config.packageName}. Error: ${messageText}`,
             blocks: [
                 {
                     type: 'header',
                     text: {
                         type: 'plain_text',
-                        text: `${this.packageName} :radioactive_sign:`,
+                        text: `${this.config.packageName} :radioactive_sign:`,
                         emoji: true,
                     },
                 },
@@ -38,6 +46,6 @@ export class SlackSender {
             ],
         };
 
-        return SlackSender.send(this.errorWebhook, payload);
+        return SlackSender.send(this.config.errorWebhook, payload);
     }
 }
