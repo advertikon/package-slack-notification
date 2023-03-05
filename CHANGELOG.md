@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/advertikon/package-slack-notification/compare/v1.0.3...v1.0.4) (2023-03-05)
+
+
+### Bug Fixes
+
+* include typings ([0143dbf](https://github.com/advertikon/package-slack-notification/commit/0143dbf3029e33ccafe100d2765a06e31ceca1b7))
+
 ## [1.0.3](https://github.com/advertikon/package-slack-notification/compare/v1.0.2...v1.0.3) (2023-03-05)
 
 
