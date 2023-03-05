@@ -1,0 +1,15 @@
+{
+    "extends": "airbnb-typescript-prettier",
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": ["error", "always", { "ignorePackages": true } ],
+        "no-await-in-loop": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "camelcase": "off",
+        "no-param-reassign": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-console": "error"
+    }
+}

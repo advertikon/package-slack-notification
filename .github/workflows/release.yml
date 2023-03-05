@@ -1,0 +1,50 @@
+name: Release
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - master
+      - main
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+
+      - name: Slack Notification
+        if: ${{ always() }}
+        id: slack
+        uses: advertikon/github-action-slack-message@main
+        with:
+          channel-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          status: ${{ job.status }}
+          version: ${{ steps.package-version.outputs.current-version }}
