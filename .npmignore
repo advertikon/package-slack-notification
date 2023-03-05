@@ -4,7 +4,13 @@ tsconfig.json
 .idea
 .git
 *.ts
-/**/*.ts
 
 !index.d.ts
 !logger.d.ts
+
+src
+.github
+.husky
+.gitignore
+.prettierrc
+.releaserc

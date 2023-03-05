@@ -33,6 +33,6 @@
     "url": "https://github.com/advertikon/package-slack-notification.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
