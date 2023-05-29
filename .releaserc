@@ -20,6 +20,11 @@
                         "pattern": "master",
                         "notifyOnSuccess": true,
                         "notifyOnFail": true
+                    },
+                    {
+                        "pattern": "main",
+                        "notifyOnSuccess": true,
+                        "notifyOnFail": true
                     }
                 ]
             }
