@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/advertikon/package-slack-notification/compare/v1.0.5...v1.0.6) (2023-05-29)
+
+
+### Bug Fixes
+
+* configure samantic release slack notification ([a98c453](https://github.com/advertikon/package-slack-notification/commit/a98c453c3d8bdc7a3bd6cc6dfb4c72b8d961293f))
+
 ## [1.0.5](https://github.com/advertikon/package-slack-notification/compare/v1.0.4...v1.0.5) (2023-05-29)
 
 
