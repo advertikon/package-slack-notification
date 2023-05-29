@@ -1,6 +1,6 @@
 {
   "name": "@bogochunas/slack-notification",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Package to send notifications to Slack channels",
   "exports": "./dist/index.js",
   "main": "./dist/index.js",
