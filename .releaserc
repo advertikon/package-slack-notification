@@ -2,29 +2,27 @@
     "branches": ["master", "main"],
     "repositoryUrl": "https://github.com/advertikon/package-slack-notification",
     "plugins": [
-      "@semantic-release/commit-analyzer",
-       ["@semantic-release/npm", {
-              "npmPublish": true,
-       }],
-      "@semantic-release/changelog",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/git",
-      "@semantic-release/github",
-      [
-            "semantic-release-slack-bot",
+        "@semantic-release/commit-analyzer",
+        ["@semantic-release/npm", {
+            "npmPublish": true,
+        }],
+        "@semantic-release/changelog",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/git",
+        "@semantic-release/github",
+        ["semantic-release-slack-bot",
             {
-              "notifyOnSuccess": false,
-              "notifyOnFail": false,
-              "slackWebhook": "https://hooks.slack.com/services/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",
-              "branchesConfig": [
-                {
-                  "pattern": "master",
-                  "notifyOnSuccess": true,
-                  "notifyOnFail": true
-                }
-              ]
+                "notifyOnSuccess": false,
+                "notifyOnFail": false,
+                "slackWebhook": "https://hooks.slack.com/services/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",
+                "branchesConfig": [
+                    {
+                        "pattern": "master",
+                        "notifyOnSuccess": true,
+                        "notifyOnFail": true
+                    }
+                ]
             }
-          ]
         ]
     ]
 }
