@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/advertikon/package-slack-notification/compare/v1.0.9...v1.0.10) (2023-05-29)
+
+
+### Bug Fixes
+
+* **ci:** change slack url ([a37f95b](https://github.com/advertikon/package-slack-notification/commit/a37f95b101026a5813733346a44af96f1c9489df))
+
 ## [1.0.9](https://github.com/advertikon/package-slack-notification/compare/v1.0.8...v1.0.9) (2023-05-29)
 
 
