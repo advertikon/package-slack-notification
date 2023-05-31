@@ -201,3 +201,4 @@ fabric.properties
 *.d.ts
 *.js.map
 
+test
