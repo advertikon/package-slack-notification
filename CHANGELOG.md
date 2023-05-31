@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/advertikon/package-slack-notification/compare/v1.1.0...v1.1.1) (2023-05-31)
+
+
+### Bug Fixes
+
+* import client ([4a84505](https://github.com/advertikon/package-slack-notification/commit/4a84505de7e59b4ccb6047f94bc278b5ef9aae93))
+
 # [1.1.0](https://github.com/advertikon/package-slack-notification/compare/v1.0.11...v1.1.0) (2023-05-31)
 
 
