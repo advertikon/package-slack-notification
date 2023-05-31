@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/advertikon/package-slack-notification/compare/v1.0.11...v1.1.0) (2023-05-31)
+
+
+### Features
+
+* use semantic-relesase client ([5d9db80](https://github.com/advertikon/package-slack-notification/commit/5d9db80957fe2fafb70d8cf337f5441af948ec7e))
+
 ## [1.0.11](https://github.com/advertikon/package-slack-notification/compare/v1.0.10...v1.0.11) (2023-05-29)
 
 
