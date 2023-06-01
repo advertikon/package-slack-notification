@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/advertikon/package-slack-notification/compare/v1.1.1...v1.1.2) (2023-06-01)
+
+
+### Bug Fixes
+
+* add text, make debug configurable ([213b6d5](https://github.com/advertikon/package-slack-notification/commit/213b6d501a812ae4ae7ddea7d6624421c9165ed0))
+
 ## [1.1.1](https://github.com/advertikon/package-slack-notification/compare/v1.1.0...v1.1.1) (2023-05-31)
 
 
