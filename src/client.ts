@@ -1,4 +1,5 @@
 import { ErrorCode, WebClient, LogLevel } from '@slack/web-api';
+import { WebClientOptions } from '@slack/web-api/dist/WebClient.js';
 
 type Config = {
     token: string;
@@ -6,6 +7,7 @@ type Config = {
     logger?: {
         error: (...message: any[]) => void;
     };
+    debug?: boolean;
 };
 
 export class SlackClient {
@@ -15,12 +17,14 @@ export class SlackClient {
         logger: {
             error: (...message) => console.error(message), // eslint-disable-line no-console
         },
+        debug: false,
     };
 
     #web;
 
     constructor(config: Config) {
         this.#config = { ...this.#config, ...config };
+        const settings = {} as WebClientOptions;
 
         if (!config.token) {
             throw new Error('Token required');
@@ -30,7 +34,11 @@ export class SlackClient {
             throw new Error('Channel required');
         }
 
-        this.#web = new WebClient(config.token, { logLevel: LogLevel.DEBUG });
+        if (config.debug) {
+            settings.logLevel = LogLevel.DEBUG;
+        }
+
+        this.#web = new WebClient(config.token, settings);
     }
 
     async #postMessage(content: { text?: string; blocks? }) {
@@ -65,7 +73,7 @@ export class SlackClient {
             header = '';
         }
 
-        const content = { blocks: [] };
+        const content = { blocks: [], text };
 
         if (header) {
             content.blocks.push({
